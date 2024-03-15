@@ -42,7 +42,8 @@ class BusAdmin(admin.ModelAdmin):
      list_display=("Bus_id","Bus_name","start_time","end_time","start_station_code");
 ```
 ## OUTPUT
-![alt text](<Screenshot 2024-03-15 171409-1.png>)
+![Screenshot 2024-03-15 171409](https://github.com/mades2112/ORM/assets/152461996/d304f507-cc6d-47bb-941d-4f42083540e6)
+
 
 
 ## RESULT
