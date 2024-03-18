@@ -4,8 +4,8 @@
 ## AIM
 To develop a Django application to store and retrieve data from a Book database using Object Relational Mapping(ORM).
 
-## Entity Relationship Diagram
-![alt text](<Screenshot 2024-03-15 052715.png>)
+## ENTITY RELATIONSHIP DIAGRAM
+![alt text](<Screenshot 2024-03-18 192226.png>)
 
 ## DESIGN STEPS
 
@@ -23,27 +23,29 @@ Execute Django admin and create details for 10 books
 
 ## PROGRAM
 ```
-admin.py
+ADMIN.PY
+
 from django.contrib import admin
-from .models import Bus,BusAdmin
-admin.site.register(Bus,BusAdmin)
+from .models import BOOK,BOOKAdmin
+admin.site.register(BOOK,BOOKAdmin)
+
 ```
+MODELS.PY
 ```
-models.py
 from django.db import models
 from django.contrib import admin
-class Bus(models.Model):
-     Bus_id=models.CharField( max_length=20,primary_key=True);
-     Bus_name=models.CharField(max_length=20);
-     start_time=models.TimeField();
-     end_time=models.TimeField();
-     start_station_code=models.CharField(max_length=20);
-class BusAdmin(admin.ModelAdmin):
-     list_display=("Bus_id","Bus_name","start_time","end_time","start_station_code");
+class BOOK(models.Model):
+    BOOK_TITLE=models.CharField(max_length=50,primary_key=True);
+    BOOK_PAGES=models.IntegerField();
+    BOOK_AUTHOR=models.CharField(max_length=50);
+    BOOK_PRICE=models.DecimalField(max_digits=10,decimal_places=True);
+    BOOK_CHAPTER=models.CharField(max_length=50);
+class BOOKAdmin(admin.ModelAdmin):
+    list_display=("BOOK_TITLE","BOOK_PAGES","BOOK_AUTHOR","BOOK_PRICE","BOOK_CHAPTER");
 ```
 ## OUTPUT
-![Screenshot 2024-03-15 171409](https://github.com/mades2112/ORM/assets/152461996/d304f507-cc6d-47bb-941d-4f42083540e6)
 
+![alt text](<Screenshot 2024-03-18 190806.png>)
 
 
 ## RESULT
